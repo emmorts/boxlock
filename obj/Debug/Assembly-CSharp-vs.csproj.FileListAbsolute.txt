@@ -1,0 +1,11 @@
+C:\projects\boxlock\Temp\bin\Debug\Assembly-CSharp.dll
+C:\projects\boxlock\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\projects\boxlock\Temp\bin\Debug\UnityEditor.dll
+C:\projects\boxlock\Temp\bin\Debug\UnityEngine.dll
+C:\projects\boxlock\Temp\bin\Debug\Mono.Cecil.dll
+C:\projects\boxlock\Temp\bin\Debug\nunit.framework.dll
+C:\projects\boxlock\Temp\bin\Debug\Unity.DataContract.dll
+C:\projects\boxlock\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\projects\boxlock\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+C:\projects\boxlock\obj\Debug\Assembly-CSharp.dll
+C:\projects\boxlock\obj\Debug\Assembly-CSharp.pdb

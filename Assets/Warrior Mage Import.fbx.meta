@@ -1,0 +1,133 @@
+fileFormatVersion: 2
+guid: 1f0a82eaf8d47a04db67f363e1721258
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Body
+    100002: Decor
+    100004: Head
+    100006: Head_2
+    100008: Jaw
+    100010: L_Eye
+    100012: L_Foot
+    100014: L_Hand
+    100016: L_Leg
+    100018: L_Leg_2
+    100020: R_Eye
+    100022: R_Foot
+    100024: R_Hand
+    100026: R_Leg
+    100028: R_Leg_2
+    100030: Sword
+    100032: //RootNode
+    400000: Body
+    400002: Decor
+    400004: Head
+    400006: Head_2
+    400008: Jaw
+    400010: L_Eye
+    400012: L_Foot
+    400014: L_Hand
+    400016: L_Leg
+    400018: L_Leg_2
+    400020: R_Eye
+    400022: R_Foot
+    400024: R_Hand
+    400026: R_Leg
+    400028: R_Leg_2
+    400030: Sword
+    400032: //RootNode
+    2300000: Body
+    2300002: Decor
+    2300004: Head_2
+    2300006: Jaw
+    2300008: L_Eye
+    2300010: L_Foot
+    2300012: L_Hand
+    2300014: L_Leg_2
+    2300016: R_Eye
+    2300018: R_Foot
+    2300020: R_Hand
+    2300022: R_Leg_2
+    2300024: Sword
+    3300000: Body
+    3300002: Decor
+    3300004: Head_2
+    3300006: Jaw
+    3300008: L_Eye
+    3300010: L_Foot
+    3300012: L_Hand
+    3300014: L_Leg_2
+    3300016: R_Eye
+    3300018: R_Foot
+    3300020: R_Hand
+    3300022: R_Leg_2
+    3300024: Sword
+    4300000: Sword
+    4300002: R_Hand
+    4300004: L_Hand
+    4300006: Jaw
+    4300008: Decor
+    4300010: Head_2
+    4300012: L_Eye
+    4300014: R_Eye
+    4300016: L_Leg_2
+    4300018: L_Foot
+    4300020: R_Foot
+    4300022: R_Leg_2
+    4300024: Body
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

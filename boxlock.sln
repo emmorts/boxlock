@@ -1,19 +1,23 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-
+Project("{06841FCC-BC00-ABF9-17C1-8D54DEFA4F4C}") = "boxlock", "Assembly-CSharp.csproj", "{32DE9DC0-FD00-C92D-05BB-0C6972784A80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-
+		{32DE9DC0-FD00-C92D-05BB-0C6972784A80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32DE9DC0-FD00-C92D-05BB-0C6972784A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32DE9DC0-FD00-C92D-05BB-0C6972784A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32DE9DC0-FD00-C92D-05BB-0C6972784A80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-								GlobalSection(MonoDevelopProperties) = preSolution
+												GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
