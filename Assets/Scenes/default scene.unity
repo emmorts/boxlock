@@ -582,6 +582,7 @@ GameObject:
   - 54: {fileID: 829392030}
   - 114: {fileID: 829392034}
   - 65: {fileID: 829392032}
+  - 114: {fileID: 829392033}
   m_Layer: 0
   m_Name: Warrior Mage Import
   m_TagString: Untagged
@@ -606,7 +607,6 @@ Transform:
   - {fileID: 190365779}
   - {fileID: 2008129669}
   - {fileID: 2121324508}
-  - {fileID: 1216870121}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!54 &829392030
@@ -620,7 +620,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -652,6 +652,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &829392033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 829392028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d300130c713b7d4ab5bb42d359cb5e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Surface: {fileID: 2000963613}
 --- !u!114 &829392034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,6 +677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 5
   RotateSpeed: 40
+  Cam: {fileID: 0}
 --- !u!1 &862437911
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +845,7 @@ GameObject:
   - 92: {fileID: 1216870119}
   - 124: {fileID: 1216870118}
   - 81: {fileID: 1216870117}
+  - 114: {fileID: 1216870122}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -899,11 +913,26 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1216870116}
   m_LocalRotation: {x: .382683486, y: 0, z: 0, w: .923879564}
-  m_LocalPosition: {x: 0, y: 5, z: -5}
+  m_LocalPosition: {x: 0, y: 6, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 829392029}
-  m_RootOrder: 7
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+--- !u!114 &1216870122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1216870116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b50426150fad1a3478ded4252f2ab41d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 829392029}
+  DeltaX: 0
+  DeltaY: 8
+  DeltaZ: -8
 --- !u!1 &1259221117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,7 +1152,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_SmoothSphereCollisions: 0
+  m_SmoothSphereCollisions: 1
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: b279ed1b4785f524695edbc97699150c, type: 3}
 --- !u!1 &1724544492
