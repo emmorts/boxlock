@@ -117,9 +117,11 @@ GameObject:
   - 136: {fileID: 13600000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
+  - 81: {fileID: 8100000}
+  - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Fragile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -397,6 +399,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!81 &8100000
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -446,10 +455,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 100012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cab3d49fe861304bacb5f5b4dd306af, type: 3}
+  m_Script: {fileID: 11500000, guid: a64401770d14a494188de2695fd8f72d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 15
+  timeUntilMaxSpeed: 10
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6d2a0ea8f6cbf4d8961a2cd3fda0ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  armor_value: 1
+  h_regen: 1
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
