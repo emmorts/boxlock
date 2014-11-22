@@ -2,9 +2,10 @@
 using UnityEngine;
 using System.Collections;
 
-public class MainCharacterMovement : MonoBehaviour
+public class MainCharacterController : MonoBehaviour
 {
     public float speed = 20f;
+	public float timeUntilMaxSpeed = 2;
 
 	Animator anim;
 	private float lastSynchronizationTime = 0f;
@@ -13,9 +14,12 @@ public class MainCharacterMovement : MonoBehaviour
 	private Vector3 syncStartPosition = Vector3.zero;
 	private Vector3 syncEndPosition = Vector3.zero;
 
+    private MainCharacterMovementController movementController;
+
 	void Start()
 	{
 		anim = GetComponent<Animator>();
+        movementController = new MainCharacterMovementController(transform);
 	}
 
     void Update()
@@ -24,19 +28,14 @@ public class MainCharacterMovement : MonoBehaviour
 		float v = Input.GetAxisRaw ("Vertical");
 	    Animating(h, v);
 		if (networkView.isMine) {
-			InputMovement ();
+            movementController.Update(speed, timeUntilMaxSpeed);
 		} else {
 			SyncedMovement ();
 		}
     }
-
-	void InputMovement() {
-		if (Input.GetKey(KeyCode.W)) transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.World);
-		if (Input.GetKey(KeyCode.S)) transform.Translate(Vector3.back * Time.deltaTime * speed, Space.World);
-		if (Input.GetKey(KeyCode.A)) transform.Translate(Vector3.left * Time.deltaTime * speed, Space.World);
-		if (Input.GetKey(KeyCode.D)) transform.Translate(Vector3.right * Time.deltaTime * speed, Space.World);
-	}
 	
+	
+
 	private void SyncedMovement()
 	{
 		syncTime += Time.deltaTime;

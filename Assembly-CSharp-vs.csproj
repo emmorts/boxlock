@@ -46,7 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Objects\Player\MainCharacterMovement.cs" />
+     <Compile Include="Assets\Objects\Player\MainCharacterController.cs" />
+     <Compile Include="Assets\Objects\Player\MainCharacterMovementController.cs" />
      <Compile Include="Assets\Objects\Spell\Script\Cast.cs" />
      <Compile Include="Assets\Objects\Spell\Script\FireballBehaviour.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
