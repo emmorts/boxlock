@@ -51,11 +51,15 @@ public class MainCharacterMovement : MonoBehaviour
 	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
 	{
 		Vector3 syncPosition = Vector3.zero;
+		Quaternion syncRotation = Quaternion.LookRotation(Vector3.zero);
 		Vector3 syncVelocity = Vector3.zero;
 		if (stream.isWriting)
 		{
 			syncPosition = rigidbody.position;
 			stream.Serialize(ref syncPosition);
+
+			syncRotation = rigidbody.rotation;
+			stream.Serialize(ref syncRotation);
 			
 			syncVelocity = rigidbody.velocity;
 			stream.Serialize(ref syncVelocity);
@@ -63,6 +67,7 @@ public class MainCharacterMovement : MonoBehaviour
 		else
 		{
 			stream.Serialize(ref syncPosition);
+			stream.Serialize(ref syncRotation);
 			stream.Serialize(ref syncVelocity);
 			
 			syncTime = 0f;
@@ -71,6 +76,7 @@ public class MainCharacterMovement : MonoBehaviour
 			
 			syncEndPosition = syncPosition + syncVelocity * syncDelay;
 			syncStartPosition = rigidbody.position;
+			rigidbody.rotation = syncRotation;
 		}
 	}
 }
