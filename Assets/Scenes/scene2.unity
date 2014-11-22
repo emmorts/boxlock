@@ -916,6 +916,7 @@ GameObject:
   - 124: {fileID: 2014118578}
   - 81: {fileID: 2014118577}
   - 114: {fileID: 2014118582}
+  - 114: {fileID: 2014118583}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -994,12 +995,27 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2014118576}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07600056fa7955248ac32763e171b782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boundary: 1
-  MaxSpeed: 20
+  Boundary: 5
+  MaxSpeed: 100
   MinSpeed: 5
-  VelocityChange: 2
+  VelocityChange: 250
+--- !u!114 &2014118583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014118576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b360879798401c947a47ba33e940d7c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 400012, guid: 3c6fec5f8b135264aab63d35ec91e41b, type: 2}
+  DeltaX: 0
+  DeltaY: 20
+  DeltaZ: -10

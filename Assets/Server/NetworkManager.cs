@@ -9,7 +9,7 @@ public class NetworkManager : MonoBehaviour {
 	private HostData[] hostList;
 	
 	void StartServer() {
-		Network.InitializeServer (2, 25000, !Network.HavePublicAddress());
+		Network.InitializeServer (6, 25000, !Network.HavePublicAddress());
 		MasterServer.RegisterHost (typeName, gameName);
 	}
 
