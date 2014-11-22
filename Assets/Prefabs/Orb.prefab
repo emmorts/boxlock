@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3300000}
   - 135: {fileID: 13500000}
   - 54: {fileID: 5400000}
+  - 148: {fileID: 14800000}
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
   - 82: {fileID: 8200000}
@@ -192,7 +193,7 @@ MonoBehaviour:
   destroy_time: 5
   damage_from: 5
   damage_to: 10
-  sound_splosion: {fileID: 8300000, guid: b276af2df1b697445ac4d7d9ac0b3717, type: 3}
+  explosionSound: {fileID: 8300000, guid: b276af2df1b697445ac4d7d9ac0b3717, type: 3}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -205,6 +206,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .699999988
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!148 &14800000
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 11400000}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
