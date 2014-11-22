@@ -31,10 +31,10 @@ public class MainCharacterMovement : MonoBehaviour
     }
 
 	void InputMovement() {
-		if (Input.GetKey(KeyCode.W)) transform.Translate(Vector3.forward * Time.deltaTime * 20, Space.World);
-		if (Input.GetKey(KeyCode.S)) transform.Translate(Vector3.back * Time.deltaTime * 20, Space.World);
-		if (Input.GetKey(KeyCode.A)) transform.Translate(Vector3.left * Time.deltaTime * 20, Space.World);
-		if (Input.GetKey(KeyCode.D)) transform.Translate(Vector3.right * Time.deltaTime * 20, Space.World);
+		if (Input.GetKey(KeyCode.W)) transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.World);
+		if (Input.GetKey(KeyCode.S)) transform.Translate(Vector3.back * Time.deltaTime * speed, Space.World);
+		if (Input.GetKey(KeyCode.A)) transform.Translate(Vector3.left * Time.deltaTime * speed, Space.World);
+		if (Input.GetKey(KeyCode.D)) transform.Translate(Vector3.right * Time.deltaTime * speed, Space.World);
 	}
 	
 	private void SyncedMovement()

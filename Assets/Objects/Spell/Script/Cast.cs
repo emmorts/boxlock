@@ -8,21 +8,13 @@ public class Cast : MonoBehaviour {
 	public float speed = 20;
 	public float cooldown = 1;
 
-	public float offset = 2;
-	
-	
-	float cooldown_time = 0;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
+	public float offset = 2;	
+	private float cooldown_time = 0;
+
 	void Update () {
-		
-		if (Input.GetButtonDown("Fire1"))
+		if (Input.GetButtonDown("Fire1") && networkView.isMine)
 		{
-			if(cooldown_time < Time.time){
+			if (cooldown_time < Time.time){
 				Rigidbody inst_fireball = Instantiate(fireball, transform.position, transform.rotation) as Rigidbody;
 
 				inst_fireball.transform.Translate(Vector3.forward * offset);
