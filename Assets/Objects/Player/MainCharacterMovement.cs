@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class MainCharacterMovement : MonoBehaviour
@@ -14,7 +15,7 @@ public class MainCharacterMovement : MonoBehaviour
 
 	void Start()
 	{
-		anim = GetComponent<Animator> ();
+		anim = GetComponent<Animator>();
 	}
 
     void Update()
@@ -43,7 +44,7 @@ public class MainCharacterMovement : MonoBehaviour
 	}
 
 	void Animating (float h, float v) {
-		bool running = h != 0f || v != 0;
+		bool running = Math.Abs(h) > 0f || Math.Abs(v) > 0f;
 		anim.SetBool ("IsRunning", running);
 	}
 

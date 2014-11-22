@@ -19,7 +19,7 @@ public class NetworkManager : MonoBehaviour {
 
 	private void SpawnPlayer() {
 		var startingPos = new Vector3 (0f, 5f, 0f);
-		Network.Instantiate (playerPrefab, startingPos, Quaternion.identity, 0);
+		Network.Instantiate(playerPrefab, startingPos, Quaternion.identity, 0);
 	}
 
 	void OnGUI()
