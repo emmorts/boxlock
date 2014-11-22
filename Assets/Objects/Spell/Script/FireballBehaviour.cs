@@ -30,7 +30,7 @@ public class FireballBehaviour : MonoBehaviour {
 
 	void SyncedMovement() {
 		syncTime += Time.deltaTime;
-		rigidbody.position = Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay);
+		transform.Translate(Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay));
 	}
 
 	void OnCollisionEnter (Collision col){

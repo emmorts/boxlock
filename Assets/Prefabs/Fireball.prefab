@@ -8,12 +8,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 54: {fileID: 5400000}
+  - 114: {fileID: 11400000}
   - 148: {fileID: 14800000}
+  - 54: {fileID: 5400000}
   - 135: {fileID: 13500000}
   - 199: {fileID: 19900000}
   - 198: {fileID: 19800000}
-  - 114: {fileID: 11400000}
   - 82: {fileID: 8200000}
   - 96: {fileID: 9600000}
   m_Layer: 0
