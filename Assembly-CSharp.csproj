@@ -47,9 +47,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Objects\Player\MainCharacterMovement.cs" />
+     <Compile Include="Assets\Objects\Spell\Script\Cast.cs" />
+     <Compile Include="Assets\Objects\Spell\Script\FireballBehaviour.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\ExtensionMethods.cs" />
+     <Compile Include="Assets\Scripts\HealthMeter.cs" />
      <Compile Include="Assets\Scripts\LookAtMouse.cs" />
      <Compile Include="Assets\Scripts\RelativeInitialCoordinates.cs" />
      <Compile Include="Assets\Server\NetworkManager.cs" />
