@@ -84,13 +84,27 @@ GameObject:
   - 4: {fileID: 569155423}
   - 33: {fileID: 569155422}
   - 23: {fileID: 569155421}
+  - 64: {fileID: 569155420}
   m_Layer: 0
   m_Name: Mountains
-  m_TagString: Untagged
+  m_TagString: Destruction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &569155420
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 569155419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 843539c7900b56c40971a645f0af483f, type: 3}
 --- !u!23 &569155421
 Renderer:
   m_ObjectHideFlags: 0
@@ -145,7 +159,7 @@ GameObject:
   - 136: {fileID: 827450225}
   m_Layer: 0
   m_Name: Vulcano
-  m_TagString: Untagged
+  m_TagString: Destruction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,6 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee378fd5425c52d45b6089b41e428555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  username: Enter your name
   playerPrefab: {fileID: 100012, guid: 3c6fec5f8b135264aab63d35ec91e41b, type: 2}
 --- !u!4 &848936146
 Transform:
@@ -512,6 +527,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 15e40d07071a7bd449b7ada52b989c26, type: 3}
+      propertyPath: m_TagString
+      value: Destruction
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 15e40d07071a7bd449b7ada52b989c26, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 15e40d07071a7bd449b7ada52b989c26, type: 3}
@@ -581,6 +600,76 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!1 &1651342108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1651342110}
+  - 102: {fileID: 1651342111}
+  - 23: {fileID: 1651342109}
+  m_Layer: 0
+  m_Name: PlayerName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1651342109
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1651342108}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!4 &1651342110
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1651342108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.5499992, y: 13.1798811, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+--- !u!102 &1651342111
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1651342108}
+  m_Text: asdasdasdasd
+  m_OffsetZ: 0
+  m_CharacterSize: 14.5500002
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 50
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!1 &1688535624
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,6 +856,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 843539c7900b56c40971a645f0af483f, type: 3}
+      propertyPath: m_TagString
+      value: Destruction
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 843539c7900b56c40971a645f0af483f, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 843539c7900b56c40971a645f0af483f, type: 3}
@@ -858,7 +951,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2014118576}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!124 &2014118578
 Behaviour:
   m_ObjectHideFlags: 0

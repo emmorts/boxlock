@@ -53,7 +53,7 @@ public class MainCharacterController : MonoBehaviour
 	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
 	{
 		Vector3 syncPosition = Vector3.zero;
-		Quaternion syncRotation = Quaternion.LookRotation(Vector3.zero);
+		Quaternion syncRotation = Quaternion.identity;
 		Vector3 syncVelocity = Vector3.zero;
 		if (stream.isWriting)
 		{
