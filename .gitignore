@@ -8,6 +8,7 @@ Library/
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
 ExportedObj/
+ProjectSettings/
 obj/
 *.svd
 *.userprefs
@@ -27,7 +28,6 @@ obj/
 ._*
 .Spotlight-V100
 .Trashes
-<<<<<<< HEAD
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -36,10 +36,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 obj
-
-obj
-Temp
-=======
 ehthumbs.db
 Thumbs.db
->>>>>>> 782bc27c194e91da931ad8129752db206f9d2da1
