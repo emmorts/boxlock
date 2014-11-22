@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\CameraPan.cs" />
      <Compile Include="Assets\Scripts\LookAtMouse.cs" />
      <Compile Include="Assets\Scripts\MainCharacterMovement.cs" />
+     <Compile Include="Assets\Objects\Player\MainCharacterMovement.cs" />
      <Compile Include="Assets\Server\NetworkManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
