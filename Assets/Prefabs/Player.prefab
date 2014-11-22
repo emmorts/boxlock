@@ -110,10 +110,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400012}
+  - 54: {fileID: 5400000}
   - 95: {fileID: 9500000}
   - 148: {fileID: 14800000}
   - 114: {fileID: 11400000}
-  - 54: {fileID: 5400000}
   - 136: {fileID: 13600000}
   - 114: {fileID: 11400002}
   m_Layer: 0
@@ -392,7 +392,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -408,7 +408,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 212fde3ff787a334ba9bfa300d137222, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11400000
@@ -422,7 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cab3d49fe861304bacb5f5b4dd306af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 5
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -434,7 +434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d300130c713b7d4ab5bb42d359cb5e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Surface: {fileID: 0}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
