@@ -7,8 +7,9 @@ public class Cast : MonoBehaviour {
 	
 	public float speed = 20;
 	public float cooldown = 1;
-	
-	
+
+    public float offset = 5;
+
 	float cooldown_time = 0;
 	// Use this for initialization
 	void Start () {
@@ -20,12 +21,12 @@ public class Cast : MonoBehaviour {
 		
 		if (Input.GetButtonDown("Fire1"))
 		{
-			if(cooldown_time < Time.time){
-				Rigidbody inst_fireball = Instantiate(fireball,
-				                                               transform.position,
-				                                               transform.rotation)
-					as Rigidbody;
+			if(cooldown_time < Time.time)
+			{
+				Rigidbody inst_fireball = Instantiate(fireball, transform.position.Duplicate(), transform.rotation) as Rigidbody;
 				
+                inst_fireball.transform.Translate(Vector3.forward * offset);
+
 				inst_fireball.AddForce(GetComponentInParent<Transform>().forward.normalized*speed);
 				cooldown_time = Time.time + cooldown;
 			}

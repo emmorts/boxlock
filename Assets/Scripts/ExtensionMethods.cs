@@ -30,4 +30,9 @@ public static class ExtensionMethods {
             transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
         }
     }
+
+    public static Vector3 Duplicate(this Vector3 vec)
+    {
+        return new Vector3(vec.x, vec.y, vec.z);
+    }
 }
