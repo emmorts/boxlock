@@ -61,6 +61,7 @@ public class NetworkManager : MonoBehaviour {
 	
 	void OnConnectedToServer()
 	{
+		SpawnPlayer();
 		Debug.Log("Server Joined");
 	}
 }
