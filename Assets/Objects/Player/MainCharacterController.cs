@@ -7,7 +7,7 @@ public class MainCharacterController : MonoBehaviour
     public float speed = 20f;
 	public float timeUntilMaxSpeed = 2;
 
-	Animator anim;
+	Animator animator;
 	private float lastSynchronizationTime = 0f;
 	private float syncDelay = 0f;
 	private float syncTime = 0f;
@@ -18,7 +18,7 @@ public class MainCharacterController : MonoBehaviour
 
 	void Start()
 	{
-		anim = GetComponent<Animator>();
+		animator = GetComponent<Animator>();
         movementController = new MainCharacterMovementController(transform);
 	}
 
@@ -42,19 +42,26 @@ public class MainCharacterController : MonoBehaviour
 		rigidbody.position = Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay);
 	}
 
-	void Animating (float h, float v) {
-		bool running = Math.Abs(h) > 0f || Math.Abs(v) > 0f;
-		anim.SetBool ("IsRunning", running);
+	void Animating (float h, float v)
+	{
+		bool strafing = Math.Abs (h) > 0f;
+		animator.SetBool ("IsStrafing", strafing);
+		bool running = Math.Abs(v) > 0f;
+		animator.SetBool ("IsRunning", running);
 	}
 
 	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
 	{
 		Vector3 syncPosition = Vector3.zero;
+		Quaternion syncRotation = Quaternion.LookRotation(Vector3.zero);
 		Vector3 syncVelocity = Vector3.zero;
 		if (stream.isWriting)
 		{
 			syncPosition = rigidbody.position;
 			stream.Serialize(ref syncPosition);
+
+			syncRotation = rigidbody.rotation;
+			stream.Serialize(ref syncRotation);
 			
 			syncVelocity = rigidbody.velocity;
 			stream.Serialize(ref syncVelocity);
@@ -62,6 +69,7 @@ public class MainCharacterController : MonoBehaviour
 		else
 		{
 			stream.Serialize(ref syncPosition);
+			stream.Serialize(ref syncRotation);
 			stream.Serialize(ref syncVelocity);
 			
 			syncTime = 0f;
@@ -70,6 +78,7 @@ public class MainCharacterController : MonoBehaviour
 			
 			syncEndPosition = syncPosition + syncVelocity * syncDelay;
 			syncStartPosition = rigidbody.position;
+			rigidbody.rotation = syncRotation;
 		}
 	}
 }

@@ -7,6 +7,7 @@ public class NetworkManager : MonoBehaviour {
 	public const string gameName = "TheOnlyRoom";
 	public GameObject playerPrefab;
 	private HostData[] hostList;
+	private int onlinePlayerCount;
 	
 	void StartServer() {
 		Network.InitializeServer (6, 25000, !Network.HavePublicAddress());
@@ -18,8 +19,9 @@ public class NetworkManager : MonoBehaviour {
 	}
 
 	private void SpawnPlayer() {
-		var startingPos = new Vector3 (0f, 5f, 0f);
+		var startingPos = new Vector3 (5f, 5f, -5f);
 		Network.Instantiate(playerPrefab, startingPos, Quaternion.identity, 0);
+		//playerPrefab.renderer.material.color = Color.cyan;
 	}
 
 	void OnGUI()
@@ -62,6 +64,5 @@ public class NetworkManager : MonoBehaviour {
 	void OnConnectedToServer()
 	{
 		SpawnPlayer();
-		Debug.Log("Server Joined");
 	}
 }
