@@ -159,9 +159,8 @@ GameObject:
   - 4: {fileID: 469057172}
   - 33: {fileID: 469057171}
   - 23: {fileID: 469057170}
-  - 95: {fileID: 469057169}
-  - 64: {fileID: 469057173}
   - 136: {fileID: 469057174}
+  - 64: {fileID: 469057169}
   m_Layer: 0
   m_Name: Arena
   m_TagString: Destruction
@@ -169,22 +168,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &469057169
-Animator:
-  serializedVersion: 3
+--- !u!64 &469057169
+MeshCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 7554cc3b83e482140814ce4971433d31,
-    type: 3}
-  m_PrefabInternal: {fileID: 2130081449}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 469057168}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 7554cc3b83e482140814ce4971433d31, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 7554cc3b83e482140814ce4971433d31, type: 3}
 --- !u!23 &469057170
 Renderer:
   m_ObjectHideFlags: 0
@@ -221,24 +217,11 @@ Transform:
   m_PrefabInternal: {fileID: 2130081449}
   m_GameObject: {fileID: 469057168}
   m_LocalRotation: {x: -3.83733267e-09, y: -.515038073, z: 6.38639408e-09, w: .857167304}
-  m_LocalPosition: {x: -24.10425, y: -1.10257721, z: 0}
+  m_LocalPosition: {x: -24.10425, y: -1.38228607, z: 0}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!64 &469057173
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 469057168}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: 7554cc3b83e482140814ce4971433d31, type: 3}
 --- !u!136 &469057174
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -569,7 +552,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2014118576}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &2014118578
 Behaviour:
   m_ObjectHideFlags: 0
@@ -671,7 +654,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7554cc3b83e482140814ce4971433d31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.10257721
+      value: -1.38228607
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7554cc3b83e482140814ce4971433d31, type: 3}
       propertyPath: m_LocalPosition.z
@@ -713,7 +696,8 @@ Prefab:
       propertyPath: m_TagString
       value: Destruction
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 7554cc3b83e482140814ce4971433d31, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 7554cc3b83e482140814ce4971433d31, type: 3}
   m_RootGameObject: {fileID: 469057168}
   m_IsPrefabParent: 0
