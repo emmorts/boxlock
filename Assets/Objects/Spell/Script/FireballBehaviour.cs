@@ -36,7 +36,7 @@ public class FireballBehaviour : MonoBehaviour {
 	void OnCollisionEnter (Collision col){
 		AudioSource.PlayClipAtPoint(explosionSound, this.transform.position);
 		if (col.collider.tag == "Fireball" || col.collider.tag == "Destruction"){
-			Destroy(gameObject, 0.1f);
+			Destroy(gameObject);
 		} else {
 			col.rigidbody.AddForce(this.rigidbody.velocity.normalized * knockback);
 		}

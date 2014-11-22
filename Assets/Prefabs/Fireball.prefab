@@ -33,6 +33,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
+  - 148: {fileID: 14800004}
   - 135: {fileID: 13500004}
   - 114: {fileID: 11400004}
   - 82: {fileID: 8200004}
@@ -401,7 +402,7 @@ MonoBehaviour:
   destroy_time: 5
   damage_from: 3
   damage_to: 7
-  explosionSound: {fileID: 8300000, guid: 33f18552d32e6b646966f2c0038566d3, type: 3}
+  explosionSound: {fileID: 8300000, guid: b276af2df1b697445ac4d7d9ac0b3717, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,7 +418,7 @@ MonoBehaviour:
   destroy_time: 2
   damage_from: 0
   damage_to: 0
-  explosionSound: {fileID: 0}
+  explosionSound: {fileID: 8300000, guid: b276af2df1b697445ac4d7d9ac0b3717, type: 3}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -433,7 +434,7 @@ MonoBehaviour:
   destroy_time: 2
   damage_from: 0
   damage_to: 0
-  explosionSound: {fileID: 0}
+  explosionSound: {fileID: 8300000, guid: b276af2df1b697445ac4d7d9ac0b3717, type: 3}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -491,6 +492,18 @@ NetworkView:
   m_Enabled: 1
   m_StateSynchronization: 1
   m_Observed: {fileID: 400004}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0
+--- !u!148 &14800004
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 11400004}
   m_ViewID:
     m_ID: 0
     m_Type: 0
