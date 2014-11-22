@@ -5,7 +5,7 @@ public class NetworkManager : MonoBehaviour {
 
 	public const string typeName = "BoxLock";
 	public const string gameName = "TheOnlyRoom";
-
+	public GameObject playerPrefab;
 	private HostData[] hostList;
 	
 	void StartServer() {
@@ -14,7 +14,12 @@ public class NetworkManager : MonoBehaviour {
 	}
 
 	void OnServerInitialized() {
-		Debug.Log ("BOOM");
+		SpawnPlayer ();
+	}
+
+	private void SpawnPlayer() {
+		var startingPos = new Vector3 (0f, 1f, 0f);
+		Network.Instantiate (playerPrefab, startingPos, Quaternion.identity, 0);
 	}
 
 	void OnGUI()
