@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e240a8ca11e17184d9249171bb4429fb
+guid: 843539c7900b56c40971a645f0af483f
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,7 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Arena
+    4300000: Mountains
     9500000: //RootNode
   materials:
     importMaterials: 1

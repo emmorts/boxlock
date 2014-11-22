@@ -205,7 +205,7 @@ Transform:
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: .0870727897, y: -.00380168017, z: .0434534028, w: .99524653}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400010}
   - {fileID: 400008}
@@ -412,7 +412,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -467,10 +467,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cab3d49fe861304bacb5f5b4dd306af, type: 3}
+  m_Script: {fileID: 11500000, guid: a64401770d14a494188de2695fd8f72d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  timeUntilMaxSpeed: 8
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

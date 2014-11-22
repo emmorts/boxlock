@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e240a8ca11e17184d9249171bb4429fb
+guid: 15e40d07071a7bd449b7ada52b989c26
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,7 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Arena
+    4300000: Vulcano
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -19,7 +19,7 @@ public class NetworkManager : MonoBehaviour {
 	}
 
 	private void SpawnPlayer() {
-		var startingPos = new Vector3 (0f, 5f, 0f);
+		var startingPos = new Vector3 (5f, 5f, -5f);
 		Network.Instantiate(playerPrefab, startingPos, Quaternion.identity, 0);
 		//playerPrefab.renderer.material.color = Color.cyan;
 	}

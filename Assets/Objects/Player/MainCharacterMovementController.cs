@@ -73,7 +73,6 @@ public class MainCharacterMovementController
         if (xSpeed < -1) xSpeed = -1;
         if (xSpeed > 1) xSpeed = 1;
 
-
         Vector3 dirVector = new Vector3(xSpeed, 0, ySpeed);
 
         transform.Translate(dirVector * speed, Space.World);

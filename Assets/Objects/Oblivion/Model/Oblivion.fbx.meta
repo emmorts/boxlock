@@ -1,13 +1,20 @@
 fileFormatVersion: 2
-guid: e240a8ca11e17184d9249171bb4429fb
+guid: 184fba3a2bffb1f499076acf31af5e51
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Arena
+    100000: Lava
+    100002: //RootNode
+    100004: Water
+    400000: Lava
+    400002: //RootNode
+    400004: Water
+    2300000: Lava
+    2300002: Water
+    3300000: Lava
+    3300002: Water
+    4300000: Lava
+    4300002: Water
     9500000: //RootNode
   materials:
     importMaterials: 1
