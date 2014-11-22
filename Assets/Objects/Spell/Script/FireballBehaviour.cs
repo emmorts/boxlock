@@ -7,7 +7,7 @@ public class FireballBehaviour : MonoBehaviour {
 	public int damage_from = 0;
 	public int damage_to = 0;
 
-	public AudioClip sound_splosion;
+	public AudioClip explosionSound;
 
 	private float lastSynchronizationTime = 0f;
 	private float syncDelay = 0f;
@@ -34,14 +34,13 @@ public class FireballBehaviour : MonoBehaviour {
 	}
 
 	void OnCollisionEnter (Collision col){
-		AudioSource.PlayClipAtPoint(sound_splosion, this.transform.position);
-		if(col.collider.tag == "Fireball" || col.collider.tag == "Destruction"){
+		AudioSource.PlayClipAtPoint(explosionSound, this.transform.position);
+		if (col.collider.tag == "Fireball" || col.collider.tag == "Destruction"){
 			Destroy(gameObject, 0.1f);
-		}
-		else{
+		} else {
 			col.rigidbody.AddForce(this.rigidbody.velocity.normalized * knockback);
 		}
-		if(col.collider.tag == "Fragile"){
+		if (col.collider.tag == "Fragile"){
 			col.gameObject.GetComponent<HealthMeter>().DoDamage(Random.Range(damage_from, damage_to));
 			Destroy(gameObject);
 		}
