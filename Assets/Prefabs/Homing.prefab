@@ -35,7 +35,6 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 148: {fileID: 14800002}
-  - 114: {fileID: 11400002}
   - 135: {fileID: 13500002}
   m_Layer: 0
   m_Name: Inside
@@ -55,7 +54,6 @@ GameObject:
   - 33: {fileID: 3300002}
   - 23: {fileID: 2300002}
   - 148: {fileID: 14800004}
-  - 114: {fileID: 11400004}
   - 135: {fileID: 13500004}
   m_Layer: 0
   m_Name: Outside
@@ -287,40 +285,6 @@ MonoBehaviour:
   damage_from: 3
   damage_to: 7
   explosion: {fileID: 100000, guid: 9f979815bebf32d4c95852b05892a057, type: 2}
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02c245fcf383393448f7c2303f077fb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: {x: 0, y: 0, z: 0}
-  knockback: 0
-  destroy_time: 2
-  damage_from: 0
-  damage_to: 0
-  explosion: {fileID: 0}
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02c245fcf383393448f7c2303f077fb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: {x: 0, y: 0, z: 0}
-  knockback: 0
-  destroy_time: 2
-  damage_from: 0
-  damage_to: 0
-  explosion: {fileID: 0}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1

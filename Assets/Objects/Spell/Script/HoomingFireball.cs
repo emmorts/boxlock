@@ -29,17 +29,20 @@ public class HoomingFireball : MonoBehaviour
 			} 
 		} 
 
-		return closest.transform;	
+		return closest != null ? closest.transform : null;	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        //find the vector pointing from our position to the target
-        Vector3 _direction = (FindClosestEnemy().position - transform.position).normalized;
+		Vector3 _direction = Vector3.zero;
+		Quaternion _lookRotation = Quaternion.identity;
+		var closestTarget = FindClosestEnemy ();
 
-        //create the rotation we need to be in to look at the target
-        Quaternion _lookRotation = Quaternion.LookRotation(_direction);
-
+		if (closestTarget != null) {
+			_direction = (closestTarget.position - transform.position).normalized;
+			_lookRotation = Quaternion.LookRotation(_direction);
+		}
+		
         //rotate us over time according to speed until we are in the required rotation
         transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
         GetComponent<FireballBehaviour>().direction = Vector3.forward;
