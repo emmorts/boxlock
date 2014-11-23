@@ -4,6 +4,7 @@ using System.Collections;
 public class Cast : MonoBehaviour {
 
     public GameObject fireball;
+    public GameObject fireball2;
 	
 	public float speed = 20;
 	public float cooldown = 0.1f;
@@ -30,5 +31,19 @@ public class Cast : MonoBehaviour {
                 cooldown_time = Time.time + cooldown;
 			}
 		}
+        if (Input.GetButtonDown("Fire2") && networkView.isMine)
+        {
+            if (cooldown_time < Time.time)
+            {
+                anim.SetTrigger("Cast");
+
+                GameObject inst_fireball = Network.Instantiate(fireball2, transform.position, transform.rotation, 0) as GameObject;
+
+                inst_fireball.transform.Translate(Vector3.forward * offset);
+
+                inst_fireball.GetComponent<FireballBehaviour>().direction = Vector3.forward * speed;
+                cooldown_time = Time.time + cooldown;
+            }
+        }
 	}
 }

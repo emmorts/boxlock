@@ -1,10 +1,10 @@
-﻿using UnityEngine;
+﻿using System.IO;
+using UnityEngine;
 using System.Collections;
 
 public class HoomingFireball : MonoBehaviour
 {
     public float RotationSpeed = 5;
-    public float BallSpeed = 20;
 
 	// Use this for initialization
 	void Start () {
@@ -41,6 +41,6 @@ public class HoomingFireball : MonoBehaviour
 
         //rotate us over time according to speed until we are in the required rotation
         transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
-        rigidbody.AddForce(_direction * BallSpeed);
+        GetComponent<FireballBehaviour>().direction = Vector3.forward;
 	}
 }
