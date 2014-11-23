@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/Unity 4.3.2f1/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/Unity 4.3.2f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -52,13 +52,15 @@
      <Compile Include="Assets\Objects\Spell\Script\FireballBehaviour.cs" />
      <Compile Include="Assets\Objects\Spell\Script\HoomingFireball.cs" />
      <Compile Include="Assets\Objects\VFX\Script\Explosion.cs" />
+     <Compile Include="Assets\Scripts\AlterSpeed.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\ExtensionMethods.cs" />
-     <Compile Include="Assets\Scripts\HealthMeter.cs" />
      <Compile Include="Assets\Scripts\Knockback.cs" />
+     <Compile Include="Assets\Scripts\LavaDamage.cs" />
      <Compile Include="Assets\Scripts\LookAtMouse.cs" />
      <Compile Include="Assets\Scripts\ObjectLabel.cs" />
+     <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\RelativeInitialCoordinates.cs" />
      <Compile Include="Assets\Server\NetworkManager.cs" />
   </ItemGroup>
