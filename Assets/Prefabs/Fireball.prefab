@@ -398,7 +398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c245fcf383393448f7c2303f077fb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockback: 11
+  direction: {x: 0, y: 0, z: 0}
+  knockback: 6
   destroy_time: 5
   damage_from: 3
   damage_to: 7
@@ -414,6 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c245fcf383393448f7c2303f077fb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  direction: {x: 0, y: 0, z: 0}
   knockback: 0
   destroy_time: 2
   damage_from: 0
@@ -430,6 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c245fcf383393448f7c2303f077fb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  direction: {x: 0, y: 0, z: 0}
   knockback: 0
   destroy_time: 2
   damage_from: 0

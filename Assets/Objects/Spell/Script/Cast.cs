@@ -25,9 +25,7 @@ public class Cast : MonoBehaviour {
 
 				inst_fireball.transform.Translate(Vector3.forward * offset);
 
-			    Vector3 knockVec = GetComponentInParent<Transform>().forward.normalized;
-
-			    inst_fireball.GetComponent<FireballBehaviour>().direction = Vector3.forward*offset;
+			    inst_fireball.GetComponent<FireballBehaviour>().direction = Vector3.forward*speed;
                 cooldown_time = Time.time + cooldown;
 			}
 		}

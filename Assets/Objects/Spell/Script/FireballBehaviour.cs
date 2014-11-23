@@ -45,11 +45,11 @@ public class FireballBehaviour : MonoBehaviour
 		AudioSource.PlayClipAtPoint(explosionSound, this.transform.position);
 		if (col.collider.tag == "Fireball" || col.collider.tag == "Destruction"){
 			Destroy(gameObject);
-		} else {
-            if (col.rigidbody)
-                col.gameObject.GetComponent<Transform>().position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(0, 5, 0), 5);
 		}
-		if (col.collider.tag == "Fragile"){
+		if (col.collider.tag == "Player") {
+			col.gameObject.GetComponent<Knockback>().Add(col.gameObject.transform.position - transform.position, knockback);
+		}
+		if (col.collider.tag == "Player" || col.collider.tag == "Fragile"){
 			col.gameObject.GetComponent<HealthMeter>().DoDamage(Random.Range(damage_from, damage_to));
 			Destroy(gameObject);
 		}
