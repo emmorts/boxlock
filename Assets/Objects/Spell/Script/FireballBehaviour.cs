@@ -56,7 +56,7 @@ public class FireballBehaviour : MonoBehaviour
 		if (col.collider.tag == "Fragile" || col.collider.tag == "Player"){
 			Debug.Log("BOOM");
 			ContactPoint contactPoint = col.contacts[0];
-			col.gameObject.GetComponent<HealthMeter>().DoDamage(Random.Range(damage_from, damage_to));
+			col.gameObject.GetComponent<Player>().DoDamage(Random.Range(damage_from, damage_to));
 			Instantiate(explosion, contactPoint.point , col.transform.rotation);
 			Destroy(gameObject);
 		}
