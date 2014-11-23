@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HealthMeter : MonoBehaviour {
+public class Player : MonoBehaviour {
 	public float health = 100;
 	public float armor_value= 1;
 	public float h_regen = 1;
@@ -26,6 +26,7 @@ public class HealthMeter : MonoBehaviour {
 	}
 
 	void Start () {
+
 	}
 	
 	// Update is called once per frame
