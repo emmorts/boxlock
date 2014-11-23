@@ -206,7 +206,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: .0870727897, y: -.00380168017, z: .0434534028, w: .99524653}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 5.47349453, z: 33.6571732}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400010}
@@ -426,7 +426,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -467,7 +467,7 @@ MonoBehaviour:
   fireball: {fileID: 5400000, guid: 640b8f24f07edca4d96d25d4e8c791f2, type: 2}
   speed: 2000
   cooldown: 1
-  offset: 2
+  offset: 4
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -507,7 +507,7 @@ CapsuleCollider:
   m_Radius: .959999979
   m_Height: 3.33999991
   m_Direction: 1
-  m_Center: {x: 0, y: .460000008, z: 0}
+  m_Center: {x: 0, y: .889999986, z: 0}
 --- !u!148 &14800000
 NetworkView:
   m_ObjectHideFlags: 1

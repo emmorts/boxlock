@@ -8,35 +8,47 @@ public class NetworkManager : MonoBehaviour {
 	public string username = "Enter your name";
 	public GameObject playerPrefab;
 	private HostData[] hostList;
-	private Stack colorStack;
+	private IList colorList;
+
+	void Start()
+	{
+		colorList = new ArrayList();
+		colorList.Add (Color.red);
+		colorList.Add (Color.blue);
+		colorList.Add (Color.yellow);
+		colorList.Add (Color.green);
+		colorList.Add (Color.magenta);
+		colorList.Add (Color.cyan);
+	}
 	
-	void StartServer() {
+	void StartServer()
+	{
 		GUI.skin.textField.fontSize = 20;
 		GUI.skin.textField.alignment = TextAnchor.MiddleCenter;
 		Network.InitializeServer (6, 25000, !Network.HavePublicAddress());
 		MasterServer.RegisterHost (typeName, gameName);
-		colorStack = new Stack ();
-		colorStack.Push (Color.red);
-		colorStack.Push (Color.blue);
-		colorStack.Push (Color.yellow);
-		colorStack.Push (Color.green);
-		colorStack.Push (Color.magenta);
-		colorStack.Push (Color.cyan);
 	}
 
-	void OnServerInitialized() {
+	void OnServerInitialized()
+	{
 		SpawnPlayer ();
 	}
-
-	void OnPlayerDisconnected(NetworkPlayer player) {
-		Network.DestroyPlayerObjects (player);
-		colorStack.Push (playerPrefab.renderer.sharedMaterial.color);
+	
+	void OnConnectedToServer()
+	{
+		SpawnPlayer();
 	}
 
-	private void SpawnPlayer() {
+	void OnPlayerDisconnected(NetworkPlayer player)
+	{
+		Network.DestroyPlayerObjects (player);
+		Network.RemoveRPCsInGroup (0);
+	}
+
+	private void SpawnPlayer()
+	{
 		var startingPos = new Vector3 (5f, 5f, -5f);
 		Network.Instantiate(playerPrefab, startingPos, Quaternion.identity, 0);
-		playerPrefab.renderer.sharedMaterial.color = (Color) colorStack.Pop();
 	}
 
 	void OnGUI()
@@ -47,17 +59,17 @@ public class NetworkManager : MonoBehaviour {
 		{
 			username = GUI.TextField(new Rect(midWidth - 160, midHeight - 100, 320, 40), username, 25, GUI.skin.textField);
 
-			if (GUI.Button(new Rect(midWidth - 160, midHeight - 40, 150, 20), "Start Server"))
+			if (GUI.Button(new Rect(midWidth - 160, midHeight - 40, 150, 40), "Start Server"))
 				StartServer();
 			
-			if (GUI.Button(new Rect(midWidth + 10, midHeight - 40, 150, 20), "Refresh Hosts"))
+			if (GUI.Button(new Rect(midWidth + 10, midHeight - 40, 150, 40), "Refresh Hosts"))
 				RefreshHostList();
 			
 			if (hostList != null)
 			{
 				for (int i = 0; i < hostList.Length; i++)
 				{
-					if (GUI.Button(new Rect(midWidth - 160, midHeight + (30 * i), 320, 20), hostList[i].gameName))
+					if (GUI.Button(new Rect(midWidth - 160, midHeight + 20 + (30 * i), 320, 20), hostList[i].gameName))
 						JoinServer(hostList[i]);
 				}
 			}
@@ -80,8 +92,4 @@ public class NetworkManager : MonoBehaviour {
 		Network.Connect(hostData);
 	}
 	
-	void OnConnectedToServer()
-	{
-		SpawnPlayer();
-	}
 }
