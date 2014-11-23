@@ -464,10 +464,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6014f497b82ad674faae60f784a4cd3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireball: {fileID: 5400000, guid: 640b8f24f07edca4d96d25d4e8c791f2, type: 2}
+  fireball: {fileID: 100000, guid: 640b8f24f07edca4d96d25d4e8c791f2, type: 2}
   speed: 2000
   cooldown: 1
-  offset: 2
+  offset: 4
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
