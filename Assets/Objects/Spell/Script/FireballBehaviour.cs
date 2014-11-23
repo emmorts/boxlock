@@ -35,15 +35,17 @@ public class FireballBehaviour : MonoBehaviour {
 
 	void OnCollisionEnter (Collision col){
 		if (col.collider.tag == "Fireball" || col.collider.tag == "Destruction"){
-			Instantiate(explosion, col.transform.position, col.transform.rotation);
+			ContactPoint contactPoint = col.contacts[0];
+			Instantiate(explosion, contactPoint.point, col.transform.rotation);
 			Destroy(gameObject);
 		} else {
 			if (col.rigidbody)
 				col.rigidbody.AddForce(this.rigidbody.velocity.normalized * knockback);
 		}
 		if (col.collider.tag == "Fragile"){
+			ContactPoint contactPoint = col.contacts[0];
 			col.gameObject.GetComponent<HealthMeter>().DoDamage(Random.Range(damage_from, damage_to));
-			Instantiate(explosion, col.transform.position, col.transform.rotation);
+			Instantiate(explosion, contactPoint.point , col.transform.rotation);
 			Destroy(gameObject);
 		}
 	}
