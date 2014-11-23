@@ -20,7 +20,7 @@ public class MainCharacterController : MonoBehaviour
 	void Start()
 	{
 		animator = GetComponent<Animator>();
-		movementController = new MainCharacterMovementController(transform);
+		movementController = new MainCharacterMovementController(gameObject);
 	}
 	
 	void Update()
