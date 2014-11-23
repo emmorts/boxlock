@@ -11,12 +11,10 @@ public class HealthMeter : MonoBehaviour {
 
 	float damage_from_armor(float damage){
 		float armor = 1-(armor_value/100);
-		Debug.Log(armor);
 		return damage*armor;
 	}
-	// Use this for initialization
-	public void DoDamage(float damage){
 
+	public void DoDamage(float damage){
 		health -= damage_from_armor(damage);
 	}
 

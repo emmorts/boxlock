@@ -38,7 +38,8 @@ public class FireballBehaviour : MonoBehaviour {
 			Instantiate(explosion, col.transform.position, col.transform.rotation);
 			Destroy(gameObject);
 		} else {
-			col.rigidbody.AddForce(this.rigidbody.velocity.normalized * knockback);
+			if (col.rigidbody)
+				col.rigidbody.AddForce(this.rigidbody.velocity.normalized * knockback);
 		}
 		if (col.collider.tag == "Fragile"){
 			col.gameObject.GetComponent<HealthMeter>().DoDamage(Random.Range(damage_from, damage_to));
@@ -51,7 +52,7 @@ public class FireballBehaviour : MonoBehaviour {
 	{
 		Vector3 syncPosition = Vector3.zero;
 		Vector3 syncVelocity = Vector3.zero;
-		if (stream.isWriting)
+		if (stream.isWriting && rigidbody)
 		{
 			syncPosition = rigidbody.position;
 			stream.Serialize(ref syncPosition);
@@ -69,7 +70,8 @@ public class FireballBehaviour : MonoBehaviour {
 			lastSynchronizationTime = Time.time;
 			
 			syncEndPosition = syncPosition + syncVelocity * syncDelay;
-			syncStartPosition = rigidbody.position;
+			if (rigidbody)
+				syncStartPosition = rigidbody.position;
 		}
 	}
 
