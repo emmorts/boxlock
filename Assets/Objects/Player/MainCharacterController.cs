@@ -13,7 +13,8 @@ public class MainCharacterController : MonoBehaviour
 	private float syncTime = 0f;
 	private Vector3 syncStartPosition = Vector3.zero;
 	private Vector3 syncEndPosition = Vector3.zero;
-	private IList colorList; 
+	private IList colorList;
+    private bool disabledMovement = false;
 
     private MainCharacterMovementController movementController;
 
@@ -29,7 +30,8 @@ public class MainCharacterController : MonoBehaviour
 		float v = Input.GetAxisRaw ("Vertical");
 	    Animating(h, v);
 		if (networkView.isMine) {
-            movementController.Update(speed, timeUntilMaxSpeed);
+            if(!disabledMovement)
+                movementController.Update(speed, timeUntilMaxSpeed);
 		} else {
 			SyncedMovement ();
 		}
@@ -49,6 +51,13 @@ public class MainCharacterController : MonoBehaviour
 		animator.SetBool ("IsRunning", running);
 	}
 
+    IEnumerator EnableMovement(int timeToEnable = 2)
+    {
+        yield return new WaitForSeconds(timeToEnable);
+        GetComponent<LookAtMouse>().enabled = true;
+        disabledMovement = false;
+    }
+
     void OnCollisionEnter(Collision col)
     {
         if (col.collider.name == "Fun Ball")
@@ -58,6 +67,14 @@ public class MainCharacterController : MonoBehaviour
 			Vector3 dir = col.rigidbody.velocity - transform.position;
             dir.Set(dir.x, 0, dir.z);
             GetComponent<Knockback>().Add(dir, 20);
+        }
+        if (col.collider.tag == "Bannana")
+        {
+            GetComponent<LookAtMouse>().enabled = false;
+            disabledMovement = true;
+            transform.Rotate(-90, 0, 0);
+            Destroy(col.collider);
+            StartCoroutine(EnableMovement(2));
         }
     }
 
