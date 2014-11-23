@@ -14,6 +14,7 @@ public class HoomingFireball : MonoBehaviour
     private Transform FindClosestEnemy () {
 		// Find all game objects with tag Enemy
 		GameObject[] gos = GameObject.FindGameObjectsWithTag("Player");
+        GameObject self = GetComponent<FireballBehaviour>().GetCaster();
 
         GameObject closest = null;
 		var distance = Mathf.Infinity; 
@@ -22,7 +23,7 @@ public class HoomingFireball : MonoBehaviour
 		foreach (GameObject go in gos)  { 
 			var diff = (go.transform.position - position);
 			var curDistance = diff.sqrMagnitude; 
-			if (curDistance < distance) { 
+			if (curDistance < distance && go != self) { 
 				closest = go; 
 				distance = curDistance; 
 			} 
