@@ -1,18 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AlterSpeed.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Objects\Spell\Script\HoomingFireball.cs">
     <Files>
-      <File FileName="..\..\testProject\Assets\Scripts\playerController.cs" Line="66" Column="2" />
-      <File FileName="Assets\Objects\Player\MainCharacterController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Server\NetworkManager.cs" Line="1" Column="1" />
-      <File FileName="..\..\testProject\Assets\Scripts\networkController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Objects\Spell\Script\FireballBehaviour.cs" Line="1" Column="1" />
-      <File FileName="Assets\Objects\Spell\Script\Cast.cs" Line="1" Column="1" />
-      <File FileName="Assets\Objects\VFX\Script\Explosion.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Objects\Spell\Script\HoomingFireball.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LavaDamage.cs" Line="13" Column="41" />
-      <File FileName="Assets\Scripts\AlterSpeed.cs" Line="18" Column="3" />
+      <File FileName="Assets\Objects\Spell\Script\HoomingFireball.cs" Line="30" Column="5" />
+      <File FileName="Assets\Objects\Spell\Script\FireballBehaviour.cs" Line="105" Column="1" />
+      <File FileName="Assets\Objects\Spell\Script\Cast.cs" Line="52" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
