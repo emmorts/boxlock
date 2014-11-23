@@ -698,7 +698,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 1
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: e240a8ca11e17184d9249171bb4429fb, type: 3}
 --- !u!23 &1688535626
 Renderer:
@@ -935,6 +935,7 @@ GameObject:
   - 92: {fileID: 2014118579}
   - 124: {fileID: 2014118578}
   - 81: {fileID: 2014118577}
+  - 114: {fileID: 2014118584}
   - 114: {fileID: 2014118582}
   - 114: {fileID: 2014118583}
   m_Layer: 0
@@ -1015,7 +1016,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2014118576}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07600056fa7955248ac32763e171b782, type: 3}
   m_Name: 
@@ -1030,12 +1031,27 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2014118576}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b360879798401c947a47ba33e940d7c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 400012, guid: 3c6fec5f8b135264aab63d35ec91e41b, type: 2}
   DeltaX: 0
-  DeltaY: 30
-  DeltaZ: -15
+  DeltaY: 5
+  DeltaZ: -5
+--- !u!114 &2014118584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014118576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b50426150fad1a3478ded4252f2ab41d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 400012, guid: 3c6fec5f8b135264aab63d35ec91e41b, type: 2}
+  DeltaX: 1
+  DeltaY: 5
+  DeltaZ: -5

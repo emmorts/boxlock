@@ -9,6 +9,7 @@ public class NetworkManager : MonoBehaviour {
 	public GameObject playerPrefab;
 	private HostData[] hostList;
 	private IList colorList;
+	private int playerCount;
 
 	void Start()
 	{
@@ -31,24 +32,33 @@ public class NetworkManager : MonoBehaviour {
 
 	void OnServerInitialized()
 	{
-		SpawnPlayer ();
+		SpawnPlayer ("host");
+		playerCount++;
 	}
-	
+
 	void OnConnectedToServer()
 	{
-		SpawnPlayer();
+		SpawnPlayer (playerCount.ToString());
+		playerCount++;
 	}
 
 	void OnPlayerDisconnected(NetworkPlayer player)
 	{
 		Network.DestroyPlayerObjects (player);
 		Network.RemoveRPCsInGroup (0);
+		playerCount--;
 	}
 
-	private void SpawnPlayer()
+	private void SpawnPlayer(string name)
 	{
 		var startingPos = new Vector3 (5f, 5f, -5f);
+		//playerPrefab.name = "Player_" + name;
 		Network.Instantiate(playerPrefab, startingPos, Quaternion.identity, 0);
+		//Renderer renderer = player.GetComponent<Renderer>;
+		//Debug.Log ("gavom? " + renderer == null);
+		//if (player != null) {
+		//	player.renderer.sharedMaterial.color = (Color) colorList[playerCount];
+		//}
 	}
 
 	void OnGUI()

@@ -38,7 +38,8 @@ public class FireballBehaviour : MonoBehaviour {
 		if (col.collider.tag == "Fireball" || col.collider.tag == "Destruction"){
 			Destroy(gameObject);
 		} else {
-			col.rigidbody.AddForce(this.rigidbody.velocity.normalized * knockback);
+			if (col.rigidbody)
+				col.rigidbody.AddForce(this.rigidbody.velocity.normalized * knockback);
 		}
 		if (col.collider.tag == "Fragile"){
 			col.gameObject.GetComponent<HealthMeter>().DoDamage(Random.Range(damage_from, damage_to));
