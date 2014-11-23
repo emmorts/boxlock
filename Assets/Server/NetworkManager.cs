@@ -51,11 +51,11 @@ public class NetworkManager : MonoBehaviour {
 
 	private void SpawnPlayer(string name)
 	{
-		var startingPos = new Vector3 (5f, 5f, -5f);
+		var spawnPoints = GameObject.FindGameObjectsWithTag ("Respawn");
+		var startingPos = spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position;
 		//playerPrefab.name = "Player_" + name;
 		Network.Instantiate(playerPrefab, startingPos, Quaternion.identity, 0);
 		//Renderer renderer = player.GetComponent<Renderer>;
-		//Debug.Log ("gavom? " + renderer == null);
 		//if (player != null) {
 		//	player.renderer.sharedMaterial.color = (Color) colorList[playerCount];
 		//}

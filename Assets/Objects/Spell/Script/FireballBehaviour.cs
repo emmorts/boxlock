@@ -4,6 +4,7 @@ using System.Collections;
 public class FireballBehaviour : MonoBehaviour
 {
     public Vector3 direction;
+    private GameObject caster;
 
 	public int knockback = 0;
 	public int destroy_time = 5;
@@ -41,7 +42,18 @@ public class FireballBehaviour : MonoBehaviour
 		transform.Translate(Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay));
 	}
 
-	void OnCollisionEnter (Collision col){
+    public void SetCaster(GameObject caster)
+    {
+        this.caster = caster;
+    }
+    public GameObject GetCaster()
+    {
+        return this.caster;
+    }
+
+	void OnCollisionEnter (Collision col)
+	{
+	    if (col.gameObject == caster) return;
 		if (col.collider.tag == "Fireball" || col.collider.tag == "Destruction"){
 			ContactPoint contactPoint = col.contacts[0];
 			Instantiate(explosion, contactPoint.point, col.transform.rotation);

@@ -12,13 +12,13 @@ using UnityEngine;
 
 public class MainCharacterMovementController
 {
-    private Transform transform;
+    private GameObject gameObject;
     private float xSpeed = 0;
     private float ySpeed = 0;
 
-    public MainCharacterMovementController(Transform transform)
+    public MainCharacterMovementController(GameObject gameObject)
     {
-        this.transform = transform;
+        this.gameObject = gameObject;
     }
 
     public void Update(float speed, float timeUntilMaxSpeed)
@@ -75,6 +75,6 @@ public class MainCharacterMovementController
 
         Vector3 dirVector = new Vector3(xSpeed, 0, ySpeed);
 
-        transform.Translate(dirVector * speed, Space.World);
+        gameObject.transform.Translate(dirVector * speed, Space.World);
     }
 }
