@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c245fcf383393448f7c2303f077fb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockback: 11
+  knockback: 1000
   destroy_time: 5
   damage_from: 3
   damage_to: 7
