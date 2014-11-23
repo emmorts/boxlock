@@ -3,20 +3,43 @@ using System.Collections;
 
 public class BananaSlip : MonoBehaviour
 {
-	private GameObject banana;
-	private Vector3 target;
+    public GameObject banana;
+    private Vector3 target;
+    private float cooldown_time = 0f;
+    public float offset = 10;
+    public float cooldown = 0.5f;
 
-	void Start ()
-	{
-		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-		if (Physics.Raycast (ray))
-		{
-			//Instantiate(bana)
-		}
-	}
+    void Start()
+    {
+    }
 
-	void Update ()
-	{
-		
-	}
+    private void Update()
+    {
+        if (Input.GetKeyDown("b") && networkView.isMine)
+        {
+            Plane playerPlane = new Plane(Vector3.up, Vector3.zero);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            float hitdist = 0.0f;
+
+            if (playerPlane.Raycast(ray, out hitdist))
+            {
+                if (Physics.Raycast(ray))
+                {
+                    if (cooldown_time < Time.time)
+                    {
+                        //GetComponent<Animator>().SetTrigger("Cast");
+
+                        GameObject inst_fireball =
+                            Network.Instantiate(banana, transform.position, transform.rotation, 0) as GameObject;
+
+                        inst_fireball.transform.Translate(Vector3.forward*offset);
+                        inst_fireball.transform.RotateToMouse(10000);
+
+                        inst_fireball.rigidbody.AddRelativeForce(((Vector3.up*24.5f) + (Vector3.forward* (Vector3.Distance(inst_fireball.transform.position, ray.GetPoint(hitdist))/5))), ForceMode.VelocityChange);
+                        cooldown_time = Time.time + cooldown;
+                    }
+                }
+            }
+        }
+    }
 }
