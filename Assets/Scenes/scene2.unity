@@ -269,7 +269,7 @@ GameObject:
   - 65: {fileID: 119729882}
   m_Layer: 0
   m_Name: bowling pin
-  m_TagString: Untagged
+  m_TagString: Destruction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -725,7 +725,7 @@ GameObject:
   - 65: {fileID: 308070797}
   m_Layer: 0
   m_Name: bowling pin
-  m_TagString: Untagged
+  m_TagString: Destruction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -988,7 +988,7 @@ GameObject:
   - 65: {fileID: 444993306}
   m_Layer: 0
   m_Name: bowling pin
-  m_TagString: Untagged
+  m_TagString: Destruction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1147,7 +1147,7 @@ GameObject:
   - 65: {fileID: 460001258}
   m_Layer: 0
   m_Name: bowling pin
-  m_TagString: Untagged
+  m_TagString: Destruction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1774,6 +1774,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
+      propertyPath: m_TagString
+      value: Destruction
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
@@ -1916,7 +1920,7 @@ GameObject:
   - 65: {fileID: 792978750}
   m_Layer: 0
   m_Name: bowling pin
-  m_TagString: Untagged
+  m_TagString: Destruction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2575,7 +2579,7 @@ GameObject:
   - 65: {fileID: 1057456683}
   m_Layer: 0
   m_Name: bowling pin
-  m_TagString: Untagged
+  m_TagString: Destruction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2769,6 +2773,10 @@ Prefab:
     - target: {fileID: 400000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
       propertyPath: m_LocalScale.z
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
+      propertyPath: m_TagString
+      value: Destruction
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
@@ -3071,6 +3079,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
+      propertyPath: m_TagString
+      value: Destruction
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
@@ -3092,7 +3104,7 @@ GameObject:
   - 65: {fileID: 1291956653}
   m_Layer: 0
   m_Name: bowling pin
-  m_TagString: Untagged
+  m_TagString: Destruction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3473,6 +3485,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
+      propertyPath: m_TagString
+      value: Destruction
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
@@ -3648,6 +3664,10 @@ Prefab:
     - target: {fileID: 400000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
       propertyPath: m_LocalScale.z
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
+      propertyPath: m_TagString
+      value: Destruction
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
@@ -4074,6 +4094,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
+      propertyPath: m_TagString
+      value: Destruction
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
@@ -4130,6 +4154,10 @@ Prefab:
     - target: {fileID: 400000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
       propertyPath: m_LocalScale.z
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
+      propertyPath: m_TagString
+      value: Destruction
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
@@ -4482,6 +4510,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
+      propertyPath: m_TagString
+      value: Destruction
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
@@ -4503,7 +4535,7 @@ GameObject:
   - 65: {fileID: 1863300514}
   m_Layer: 0
   m_Name: bowling pin
-  m_TagString: Untagged
+  m_TagString: Destruction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4794,7 +4826,7 @@ GameObject:
   - 65: {fileID: 2085668453}
   m_Layer: 0
   m_Name: bowling pin
-  m_TagString: Untagged
+  m_TagString: Destruction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4988,6 +5020,10 @@ Prefab:
     - target: {fileID: 400000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
       propertyPath: m_LocalScale.z
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}
+      propertyPath: m_TagString
+      value: Destruction
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 3ca023efe45c29d4fac0e9e193e6a565, type: 3}

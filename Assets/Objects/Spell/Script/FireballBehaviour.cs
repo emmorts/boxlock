@@ -45,6 +45,7 @@ public class FireballBehaviour : MonoBehaviour
 		if (col.collider.tag == "Fireball" || col.collider.tag == "Destruction"){
 			ContactPoint contactPoint = col.contacts[0];
 			Instantiate(explosion, contactPoint.point, col.transform.rotation);
+            col.collider.rigidbody.AddForce((col.gameObject.transform.position - contactPoint.point).normalized * 100, ForceMode.VelocityChange);
 			Destroy(gameObject);
 		}
 		if (col.collider.tag == "Player") {
