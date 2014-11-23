@@ -1,7 +1,10 @@
 using UnityEngine;
 using System.Collections;
 
-public class FireballBehaviour : MonoBehaviour {
+public class FireballBehaviour : MonoBehaviour
+{
+    public Vector3 direction;
+
 	public int knockback = 0;
 	public int destroy_time = 5;
 	public int damage_from = 0;
@@ -23,9 +26,14 @@ public class FireballBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!networkView.isMine) {
+	    if (!networkView.isMine)
+	    {
 			SyncedMovement();
 		}
+	    else
+	    {
+	        transform.Translate(direction);
+	    }
 	}
 
 	void SyncedMovement() {
@@ -37,10 +45,13 @@ public class FireballBehaviour : MonoBehaviour {
 		if (col.collider.tag == "Fireball" || col.collider.tag == "Destruction"){
 			ContactPoint contactPoint = col.contacts[0];
 			Instantiate(explosion, contactPoint.point, col.transform.rotation);
+			if(col.collider.rigidbody){
+            	col.collider.rigidbody.AddForce((col.gameObject.transform.position - contactPoint.point).normalized * 100, ForceMode.VelocityChange);
+			}
 			Destroy(gameObject);
-		} else {
-			if (col.rigidbody)
-				col.rigidbody.AddForce(this.rigidbody.velocity.normalized * knockback);
+		}
+		if (col.collider.tag == "Player") {
+			col.gameObject.GetComponent<Knockback>().Add(col.gameObject.transform.position - transform.position, knockback);
 		}
 		if (col.collider.tag == "Fragile" || col.collider.tag == "Player"){
 			Debug.Log("BOOM");
