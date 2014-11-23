@@ -53,7 +53,9 @@ public class MainCharacterController : MonoBehaviour
     {
         if (col.collider.name == "Fun Ball")
         {
-            Vector3 dir = col.rigidbody.velocity - transform.position;
+			var velocity = col.rigidbody.velocity;
+			var currentPosition = transform.rigidbody.velocity;
+			Vector3 dir = col.rigidbody.velocity - transform.position;
             dir.Set(dir.x, 0, dir.z);
             GetComponent<Knockback>().Add(dir, 20);
         }

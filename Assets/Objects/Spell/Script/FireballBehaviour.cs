@@ -60,7 +60,7 @@ public class FireballBehaviour : MonoBehaviour
 			if (col.collider.rigidbody) {
             	col.collider.rigidbody.AddForce((col.gameObject.transform.position - contactPoint.point).normalized * 100, ForceMode.VelocityChange);
 			}
-			Destroy(gameObject);
+			networkView.RPC("DestroyObject", RPCMode.AllBuffered);
 		}
 		if (col.collider.tag == "Player") {
 			col.gameObject.GetComponent<Knockback>().Add(col.gameObject.transform.position - transform.position, knockback);
@@ -69,18 +69,28 @@ public class FireballBehaviour : MonoBehaviour
 			ContactPoint contactPoint = col.contacts[0];
 			col.gameObject.GetComponent<Player>().DoDamage(Random.Range(damage_from, damage_to));
 			Instantiate(explosion, contactPoint.point , col.transform.rotation);
-			Destroy(gameObject);
+			networkView.RPC("DestroyObject", RPCMode.AllBuffered);
 		}
 	}
 
+	[RPC]
+	void DestroyObject ()
+	{
+		Destroy (gameObject);
+	}
+	
 	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
 	{
 		Vector3 syncPosition = Vector3.zero;
+		Quaternion syncRotation = Quaternion.identity;
 		Vector3 syncVelocity = Vector3.zero;
-		if (stream.isWriting && rigidbody)
+		if (stream.isWriting)
 		{
 			syncPosition = rigidbody.position;
 			stream.Serialize(ref syncPosition);
+			
+			syncRotation = rigidbody.rotation;
+			stream.Serialize(ref syncRotation);
 			
 			syncVelocity = rigidbody.velocity;
 			stream.Serialize(ref syncVelocity);
@@ -88,6 +98,7 @@ public class FireballBehaviour : MonoBehaviour
 		else
 		{
 			stream.Serialize(ref syncPosition);
+			stream.Serialize(ref syncRotation);
 			stream.Serialize(ref syncVelocity);
 			
 			syncTime = 0f;
@@ -95,8 +106,8 @@ public class FireballBehaviour : MonoBehaviour
 			lastSynchronizationTime = Time.time;
 			
 			syncEndPosition = syncPosition + syncVelocity * syncDelay;
-			if (rigidbody)
-				syncStartPosition = rigidbody.position;
+			syncStartPosition = rigidbody.position;
+			rigidbody.rotation = syncRotation;
 		}
 	}
 

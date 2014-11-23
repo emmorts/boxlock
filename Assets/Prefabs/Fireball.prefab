@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
-  - 148: {fileID: 14800000}
   - 54: {fileID: 5400000}
   - 135: {fileID: 13500000}
   - 199: {fileID: 19900000}
@@ -17,6 +16,7 @@ GameObject:
   - 82: {fileID: 8200000}
   - 96: {fileID: 9600000}
   - 108: {fileID: 10800000}
+  - 148: {fileID: 14800000}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Fireball
@@ -454,7 +454,7 @@ NetworkView:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_StateSynchronization: 1
-  m_Observed: {fileID: 11400000}
+  m_Observed: {fileID: 400000}
   m_ViewID:
     m_ID: 0
     m_Type: 0

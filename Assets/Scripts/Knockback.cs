@@ -17,15 +17,16 @@ public class Knockback : MonoBehaviour
 	    {
 			var vector = direction.normalized * force * Time.deltaTime;
             transform.Translate(vector, Space.World);
-			GetComponent<NetworkView>().RPC("UpdateKnockback", RPCMode.Others, vector);
+			networkView.RPC("UpdateKnockback", RPCMode.Others, transform.position, transform.rotation);
 	        force -= friction * Time.deltaTime;
 	        if (force < 0) force = 0;
 	    }
 	}
 
 	[RPC]
-	void UpdateKnockback (Vector3 newPosition)
+	void UpdateKnockback (Vector3 newPosition, Quaternion newRotation)
 	{
-		transform.Translate (newPosition, Space.World);
+		transform.position = newPosition;
+		transform.rotation = newRotation;
 	}
 }
