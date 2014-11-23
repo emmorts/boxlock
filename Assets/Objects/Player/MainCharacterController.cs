@@ -49,6 +49,16 @@ public class MainCharacterController : MonoBehaviour
 		animator.SetBool ("IsRunning", running);
 	}
 
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.collider.name == "Fun Ball")
+        {
+            Vector3 dir = col.rigidbody.velocity - transform.position;
+            dir.Set(dir.x, 0, dir.z);
+            GetComponent<Knockback>().Add(dir, 20);
+        }
+    }
+
 	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
 	{
 		Vector3 syncPosition = Vector3.zero;
