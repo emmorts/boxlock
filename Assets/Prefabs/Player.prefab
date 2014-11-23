@@ -555,8 +555,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  armor_value: 1
-  h_regen: 1
+  armorValue: 1
+  healthRegen: 1
+  timeToRespawn: 5
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1

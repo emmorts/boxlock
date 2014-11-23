@@ -45,6 +45,7 @@ ModelImporter:
     7400000: Run
     7400002: Idle
     7400004: Cast
+    7400006: Fall
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -155,6 +156,50 @@ ModelImporter:
       takeName: C4D Animation Take
       firstFrame: 80
       lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: L_Leg
+        weight: 1
+      - path: R_Leg
+        weight: 1
+      - path: Weapon
+        weight: 1
+      - path: Weapon/Gun
+        weight: 1
+      - path: Weapon/L_Hand_1
+        weight: 1
+      - path: Weapon/L_Hand_2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Fall
+      takeName: C4D Animation Take
+      firstFrame: 160
+      lastFrame: 200
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

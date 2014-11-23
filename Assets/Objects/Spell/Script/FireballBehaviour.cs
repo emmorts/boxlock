@@ -57,7 +57,7 @@ public class FireballBehaviour : MonoBehaviour
 		if (col.collider.tag == "Fireball" || col.collider.tag == "Destruction"){
 			ContactPoint contactPoint = col.contacts[0];
 			Instantiate(explosion, contactPoint.point, col.transform.rotation);
-			if(col.collider.rigidbody){
+			if (col.collider.rigidbody) {
             	col.collider.rigidbody.AddForce((col.gameObject.transform.position - contactPoint.point).normalized * 100, ForceMode.VelocityChange);
 			}
 			Destroy(gameObject);
@@ -66,7 +66,6 @@ public class FireballBehaviour : MonoBehaviour
 			col.gameObject.GetComponent<Knockback>().Add(col.gameObject.transform.position - transform.position, knockback);
 		}
 		if (col.collider.tag == "Fragile" || col.collider.tag == "Player"){
-			Debug.Log("BOOM");
 			ContactPoint contactPoint = col.contacts[0];
 			col.gameObject.GetComponent<Player>().DoDamage(Random.Range(damage_from, damage_to));
 			Instantiate(explosion, contactPoint.point , col.transform.rotation);
