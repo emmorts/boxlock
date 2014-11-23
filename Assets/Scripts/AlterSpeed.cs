@@ -9,7 +9,7 @@ public class AlterSpeed : MonoBehaviour {
 
 	void OnCollisionEnter (Collision col)
 	{
-		if (col.collider.tag == "Player") {
+		if (col.collider.tag == "Player") { 
 			originalSpeed = col.gameObject.GetComponent<MainCharacterController> ().speed;
 		}
 	}

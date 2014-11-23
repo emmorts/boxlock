@@ -5,7 +5,7 @@ public class Knockback : MonoBehaviour
 {
     public Vector3 direction;
     public float force = 5;
-    public float friction = 0.5f;
+    public float friction = 8f;
 
 	public void Add(Vector3 direction, float force) {
 		this.direction = (this.direction.normalized * this.force) + (direction.normalized * force);
