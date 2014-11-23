@@ -17,10 +17,11 @@ public class Cast : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetButtonDown("Fire1") && networkView.isMine)
+		if (Input.GetButtonDown("Fire1") &&  networkView.isMine)
 		{
 			if (cooldown_time < Time.time){
 				anim.SetTrigger("Cast");
+
                 GameObject inst_fireball = Network.Instantiate(fireball, transform.position, transform.rotation, 0) as GameObject;
 
 				inst_fireball.transform.Translate(Vector3.forward * offset);

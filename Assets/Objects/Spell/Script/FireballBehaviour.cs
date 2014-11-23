@@ -10,7 +10,7 @@ public class FireballBehaviour : MonoBehaviour
 	public int damage_from = 0;
 	public int damage_to = 0;
 
-	public AudioClip explosionSound;
+	public GameObject explosion;
 
 	private float lastSynchronizationTime = 0f;
 	private float syncDelay = 0f;
@@ -42,15 +42,19 @@ public class FireballBehaviour : MonoBehaviour
 	}
 
 	void OnCollisionEnter (Collision col){
-		AudioSource.PlayClipAtPoint(explosionSound, this.transform.position);
 		if (col.collider.tag == "Fireball" || col.collider.tag == "Destruction"){
+			ContactPoint contactPoint = col.contacts[0];
+			Instantiate(explosion, contactPoint.point, col.transform.rotation);
 			Destroy(gameObject);
 		}
 		if (col.collider.tag == "Player") {
 			col.gameObject.GetComponent<Knockback>().Add(col.gameObject.transform.position - transform.position, knockback);
 		}
-		if (col.collider.tag == "Player" || col.collider.tag == "Fragile"){
+		if (col.collider.tag == "Fragile" || col.collider.tag == "Player"){
+			Debug.Log("BOOM");
+			ContactPoint contactPoint = col.contacts[0];
 			col.gameObject.GetComponent<HealthMeter>().DoDamage(Random.Range(damage_from, damage_to));
+			Instantiate(explosion, contactPoint.point , col.transform.rotation);
 			Destroy(gameObject);
 		}
 	}
@@ -78,7 +82,7 @@ public class FireballBehaviour : MonoBehaviour
 			
 			syncEndPosition = syncPosition + syncVelocity * syncDelay;
 			if (rigidbody)
-			syncStartPosition = rigidbody.position;
+				syncStartPosition = rigidbody.position;
 		}
 	}
 

@@ -34,9 +34,8 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 148: {fileID: 14800004}
-  - 135: {fileID: 13500004}
   - 114: {fileID: 11400004}
-  - 82: {fileID: 8200004}
+  - 135: {fileID: 13500004}
   m_Layer: 0
   m_Name: Inside
   m_TagString: Fireball
@@ -55,9 +54,8 @@ GameObject:
   - 33: {fileID: 3300002}
   - 23: {fileID: 2300002}
   - 148: {fileID: 14800002}
-  - 135: {fileID: 13500002}
   - 114: {fileID: 11400002}
-  - 82: {fileID: 8200002}
+  - 135: {fileID: 13500002}
   m_Layer: 0
   m_Name: Outside
   m_TagString: Fireball
@@ -403,10 +401,10 @@ MonoBehaviour:
   destroy_time: 5
   damage_from: 3
   damage_to: 7
-  explosionSound: {fileID: 8300000, guid: b276af2df1b697445ac4d7d9ac0b3717, type: 3}
+  explosion: {fileID: 100000, guid: 9f979815bebf32d4c95852b05892a057, type: 2}
 --- !u!114 &11400002
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
@@ -420,10 +418,10 @@ MonoBehaviour:
   destroy_time: 2
   damage_from: 0
   damage_to: 0
-  explosionSound: {fileID: 8300000, guid: b276af2df1b697445ac4d7d9ac0b3717, type: 3}
+  explosion: {fileID: 0}
 --- !u!114 &11400004
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
@@ -437,7 +435,7 @@ MonoBehaviour:
   destroy_time: 2
   damage_from: 0
   damage_to: 0
-  explosionSound: {fileID: 8300000, guid: b276af2df1b697445ac4d7d9ac0b3717, type: 3}
+  explosion: {fileID: 0}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -452,7 +450,7 @@ SphereCollider:
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &13500002
 SphereCollider:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
@@ -464,7 +462,7 @@ SphereCollider:
   m_Center: {x: .00200160593, y: .00516781956, z: -.00550959259}
 --- !u!135 &13500004
 SphereCollider:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
@@ -506,7 +504,7 @@ NetworkView:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_StateSynchronization: 1
-  m_Observed: {fileID: 11400004}
+  m_Observed: {fileID: 0}
   m_ViewID:
     m_ID: 0
     m_Type: 0
