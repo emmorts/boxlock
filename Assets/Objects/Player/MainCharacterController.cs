@@ -13,16 +13,17 @@ public class MainCharacterController : MonoBehaviour
 	private float syncTime = 0f;
 	private Vector3 syncStartPosition = Vector3.zero;
 	private Vector3 syncEndPosition = Vector3.zero;
+	private IList colorList; 
 
     private MainCharacterMovementController movementController;
 
 	void Start()
 	{
 		animator = GetComponent<Animator>();
-        movementController = new MainCharacterMovementController(transform);
+		movementController = new MainCharacterMovementController(transform);
 	}
-
-    void Update()
+	
+	void Update()
     {
 		float h = Input.GetAxisRaw ("Horizontal");
 		float v = Input.GetAxisRaw ("Vertical");
@@ -44,9 +45,7 @@ public class MainCharacterController : MonoBehaviour
 
 	void Animating (float h, float v)
 	{
-		bool strafing = Math.Abs (h) > 0f;
-		animator.SetBool ("IsStrafing", strafing);
-		bool running = Math.Abs(v) > 0f;
+		bool running = Math.Abs (h) > 0f || Math.Abs(v) > 0f;
 		animator.SetBool ("IsRunning", running);
 	}
 

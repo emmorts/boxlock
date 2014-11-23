@@ -28,8 +28,8 @@ public class FireballBehaviour : MonoBehaviour
 	void Update () {
 	    if (!networkView.isMine)
 	    {
-	        SyncedMovement();
-	    }
+			SyncedMovement();
+		}
 	    else
 	    {
 	        transform.Translate(direction);
@@ -46,7 +46,8 @@ public class FireballBehaviour : MonoBehaviour
 		if (col.collider.tag == "Fireball" || col.collider.tag == "Destruction"){
 			Destroy(gameObject);
 		} else {
-            col.gameObject.GetComponent<Transform>().position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(0,5,0), 5);
+            if (col.rigidbody)
+                col.gameObject.GetComponent<Transform>().position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(0, 5, 0), 5);
 		}
 		if (col.collider.tag == "Fragile"){
 			col.gameObject.GetComponent<HealthMeter>().DoDamage(Random.Range(damage_from, damage_to));
@@ -58,7 +59,7 @@ public class FireballBehaviour : MonoBehaviour
 	{
 		Vector3 syncPosition = Vector3.zero;
 		Vector3 syncVelocity = Vector3.zero;
-		if (stream.isWriting)
+		if (stream.isWriting && rigidbody)
 		{
 			syncPosition = rigidbody.position;
 			stream.Serialize(ref syncPosition);
@@ -76,6 +77,7 @@ public class FireballBehaviour : MonoBehaviour
 			lastSynchronizationTime = Time.time;
 			
 			syncEndPosition = syncPosition + syncVelocity * syncDelay;
+			if (rigidbody)
 			syncStartPosition = rigidbody.position;
 		}
 	}
