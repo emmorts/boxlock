@@ -36,7 +36,7 @@ public class MainCharacterMovementController
         if (Input.GetKey(KeyCode.A)) { left = true; }
         if (Input.GetKey(KeyCode.D)) { right = true; }
 
-        float velChange = (1f/timeUntilMaxSpeed)*Time.deltaTime;
+        float velChange = (1f / timeUntilMaxSpeed) * Time.deltaTime;
 
         if (up)
         {

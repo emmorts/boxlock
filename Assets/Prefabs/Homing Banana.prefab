@@ -17,7 +17,7 @@ GameObject:
   - 96: {fileID: 9600000}
   - 108: {fileID: 10800000}
   m_Layer: 0
-  m_Name: Homing Banan
+  m_Name: Homing Banana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,10 +162,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ff89c8666308b740b48b1a244eb5211, type: 3}
+  m_Script: {fileID: 11500000, guid: fba6a3f0f5f833c47a049f8dcba08769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationSpeed: 5
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
