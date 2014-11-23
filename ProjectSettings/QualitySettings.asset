@@ -4,7 +4,7 @@
 QualitySettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_CurrentQuality: 3
+  m_CurrentQuality: 6
   m_QualitySettings:
   - serializedVersion: 2
     name: Fastest
@@ -65,16 +65,16 @@ QualitySettings:
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Good
-    pixelLightCount: 2
+    pixelLightCount: 3
     shadows: 2
-    shadowResolution: 1
+    shadowResolution: 2
     shadowProjection: 1
     shadowCascades: 2
-    shadowDistance: 40
+    shadowDistance: 300
     blendWeights: 2
     textureQuality: 0
     anisotropicTextures: 1
-    antiAliasing: 0
+    antiAliasing: 2
     softParticles: 0
     softVegetation: 1
     vSyncCount: 1
@@ -120,9 +120,28 @@ QualitySettings:
     maximumLODLevel: 0
     particleRaycastBudget: 4096
     excludedTargetPlatforms: []
+  - serializedVersion: 2
+    name: Justo Best
+    pixelLightCount: 10
+    shadows: 2
+    shadowResolution: 2
+    shadowProjection: 1
+    shadowCascades: 4
+    shadowDistance: 400
+    blendWeights: 4
+    textureQuality: 0
+    anisotropicTextures: 2
+    antiAliasing: 4
+    softParticles: 1
+    softVegetation: 1
+    vSyncCount: 1
+    lodBias: 2
+    maximumLODLevel: 0
+    particleRaycastBudget: 8000
+    excludedTargetPlatforms: []
   m_PerPlatformDefaultQuality:
-    Android: 2
-    BlackBerry: 2
+    Android: 6
+    BlackBerry: 6
     FlashPlayer: 3
     GLES Emulation: 3
     PS3: 3
@@ -130,11 +149,11 @@ QualitySettings:
     PSM: 3
     PSP2: 3
     Samsung TV: 2
-    Standalone: 3
+    Standalone: 6
     Tizen: 2
-    WP8: 3
-    Web: 3
-    Windows Store Apps: 3
+    WP8: 6
+    Web: 6
+    Windows Store Apps: 6
     XBOX360: 3
     XboxOne: 3
-    iPhone: 2
+    iPhone: 6
