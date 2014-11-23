@@ -569,7 +569,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 100000, guid: 640b8f24f07edca4d96d25d4e8c791f2, type: 2}
-  speed: 5
+  fireball2: {fileID: 100000, guid: ba0ed3b0aef97ba449a02ddd38ab6b66, type: 2}
+  speed: 2
   cooldown: 1
   offset: 10
 --- !u!114 &11400008

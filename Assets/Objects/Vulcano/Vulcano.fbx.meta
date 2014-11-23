@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 15e40d07071a7bd449b7ada52b989c26
+guid: d67cafbe7b7616f4c957cec338083158
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -42,9 +42,9 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
   tangentSpace:
-    normalSmoothAngle: 60
+    normalSmoothAngle: 75
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
