@@ -2784,7 +2784,7 @@ GameObject:
   - 54: {fileID: 1032350439}
   m_Layer: 0
   m_Name: Fun Ball
-  m_TagString: Untagged
+  m_TagString: Destruction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4610,6 +4610,10 @@ Prefab:
     - target: {fileID: 400000, guid: cae76c48014152244a714bc880fa5e36, type: 3}
       propertyPath: m_LocalScale.z
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cae76c48014152244a714bc880fa5e36, type: 3}
+      propertyPath: m_TagString
+      value: Destruction
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cae76c48014152244a714bc880fa5e36, type: 3}
